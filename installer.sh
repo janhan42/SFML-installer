@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git clone https://github.com/janhan42/SFML-installer.git
+
 compiler=$(cc --version)
 arch=$(uname -m)
 pwd=$(pwd)
