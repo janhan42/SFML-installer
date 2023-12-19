@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sfml_path="../SFML/include"
+sfml_path="./SFML/include"
 
 if [ ! -d "$sfml_path" ]; then
 	echo "SFML library should exists in $sfml_path"
