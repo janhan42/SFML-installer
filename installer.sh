@@ -19,11 +19,10 @@ sfml_out=${sfml_lib%.tar.gz}
 
 tar -xzvf ./SFML-installer/lib/SFML/"$sfml_lib" -C "$pwd"
 mv "$sfml_out" "$sfml_dir"
-mv ./"$sfml_dir"/lib/sfml/$sfml_bundle_out ./"$sfml_dir"/lib/sfml/2.6.1
-mv ./"$sfml_dir"/lib/sfml/2.6.1/extlibs/FLAC.framework ./"$sfml_dir"/lib/sfml/2.6.1/Frameworks/FLAC.framework
-mv ./"$sfml_dir"/lib/sfml/2.6.1/extlibs/freetype.framework ./"$sfml_dir"/lib/sfml/2.6.1/Frameworks/freetype.framework
-mv ./"$sfml_dir"/lib/sfml/2.6.1/extlibs/ogg.framework ./"$sfml_dir"/lib/sfml/2.6.1/Frameworks/ogg.framework
-mv ./"$sfml_dir"/lib/sfml/2.6.1/extlibs/vorbis.framework ./"$sfml_dir"/lib/sfml/2.6.1/Frameworks/vorbis.framework
-mv ./"$sfml_dir"/lib/sfml/2.6.1/extlibs/vorbisenc.framework ./"$sfml_dir"/lib/sfml/2.6.1/Frameworks/vorbisenc.framework
-mv ./"$sfml_dir"/lib/sfml/2.6.1/extlibs/vorbisfile.framework ./"$sfml_dir"/lib/sfml/2.6.1/Frameworks/vorbisfile.framework
+mv ./"$sfml_dir"/extlibs/FLAC.framework ./"$sfml_dir"/Frameworks/FLAC.framework
+mv ./"$sfml_dir"/extlibs/freetype.framework ./"$sfml_dir"/Frameworks/freetype.framework
+mv ./"$sfml_dir"/extlibs/ogg.framework ./"$sfml_dir"/Frameworks/ogg.framework
+mv ./"$sfml_dir"/extlibs/vorbis.framework ./"$sfml_dir"/Frameworks/vorbis.framework
+mv ./"$sfml_dir"/extlibs/vorbisenc.framework ./"$sfml_dir"/Frameworks/vorbisenc.framework
+mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfile.framework
 rm -fr "SFML-installer"
