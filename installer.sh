@@ -17,6 +17,6 @@ fi
 sfml_dir="SFML"
 sfml_out=${sfml_lib%.tar.gz}
 
-tar -xzvf ./lib/SFML/"$sfml_lib" -C "$pwd"
+tar -xzvf ./SFML-installer/lib/SFML/"$sfml_lib" -C "$pwd"
 mv "$sfml_out" "$sfml_dir"
 rm -fr "SFML-installer"
