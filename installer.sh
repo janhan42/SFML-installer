@@ -23,7 +23,7 @@ fi
 sfml_dir="SFML"
 sfml_out=${sfml_lib%.tar.gz}
 
-echo $CURSIVE$GRAY "     - Making SFML..." $NONE
+echo -e $CURSIVE$GRAY "     - Making SFML..." $NONE
 tar -xzf ./SFML-installer/lib/SFML/"$sfml_lib" -C "$pwd"
 sleep 0.2
 echo -e "\033[1A\033[K"
@@ -39,4 +39,4 @@ mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfil
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
 echo -e "\033[1A\033[K"
-echo $CURSIVE$GREEN "     - Complite SFML -" $NONE
+echo -e $CURSIVE$GREEN "     - Complite SFML -" $NONE
