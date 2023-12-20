@@ -39,4 +39,4 @@ mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfil
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
 echo -e "\033[1A\033[K"
-echo -e {$CURSIVE}{$GREEN} "     - Complite SFML -" {$NONE}
+echo -e $CURSIVE$GREEN "     - Complite SFML -" $NONE
