@@ -39,6 +39,7 @@ mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfil
 
 echo ./SFML-installer/Makefile >> Makefile
 echo ./SFML-installer/.gitignore >> .gitignore
+mkdir .OBJ
 
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
