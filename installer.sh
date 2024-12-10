@@ -36,6 +36,10 @@ mv ./"$sfml_dir"/extlibs/ogg.framework ./"$sfml_dir"/Frameworks/ogg.framework
 mv ./"$sfml_dir"/extlibs/vorbis.framework ./"$sfml_dir"/Frameworks/vorbis.framework
 mv ./"$sfml_dir"/extlibs/vorbisenc.framework ./"$sfml_dir"/Frameworks/vorbisenc.framework
 mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfile.framework
+
+mv ./Makefile ../
+mv ./.gitignore ../
+
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
 echo -e "\033[1A\033[K"
