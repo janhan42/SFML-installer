@@ -39,7 +39,14 @@ mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfil
 
 echo ./SFML-installer/Makefile >> Makefile
 echo ./SFML-installer/.gitignore >> .gitignore
-mkdir .OBJ
+
+obj_dir="${pwd}/.OBJ"
+if [ ! -d "$obj_dir" ]; then
+	mkdir "$obj_dir"
+	echo -e $CURSIVE $YELLOW "       - Created .OBJ directory -" $NONE
+else
+	echo -e $CURSIVE $GRAY "       - .OBJ directory already exists -" $NONE
+fi
 
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
