@@ -40,7 +40,7 @@ mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfil
 echo ./SFML-installer/Makefile >> Makefile
 echo ./SFML-installer/.gitignore >> .gitignore
 
-obj_dir="${pwd}/.OBJ"
+obj_dir="$./.OBJ"
 if [ ! -d "$obj_dir" ]; then
 	mkdir "$obj_dir"
 	echo -e $CURSIVE $YELLOW "       - Created .OBJ directory -" $NONE
