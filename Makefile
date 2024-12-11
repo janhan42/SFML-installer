@@ -1,4 +1,4 @@
-NAME			=		Raycasting.cpp
+NAME			=
 
 CXX				=		c++
 CXXFLAGS		=		-I./SFML/include
