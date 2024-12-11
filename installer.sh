@@ -42,8 +42,7 @@ echo ./SFML-installer/.gitignore >> .gitignore
 
 obj_dir=".OBJ"
 if [ ! -d "$obj_dir" ]; then
-	mkdir "$obj_dir"
-	mkdir "srcs"
+	mkdir "$obj_dir" "srcs"
 	echo -e $CURSIVE $YELLOW "       - Created .OBJ directory -" $NONE
 else
 	echo -e $CURSIVE $GRAY "       - .OBJ directory already exists -" $NONE
