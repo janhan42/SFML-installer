@@ -61,5 +61,6 @@ fi
 
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
+mkdir -p "./srcs"
 echo -e "\033[1A\033[K"
 echo -e $CURSIVE $GREEN "        - Complete SFML -" $NONE
