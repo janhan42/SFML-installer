@@ -41,11 +41,22 @@ echo ./SFML-installer/Makefile >> Makefile
 echo ./SFML-installer/.gitignore >> .gitignore
 
 obj_dir=".OBJ"
+src_dir="srcs"
+
+# .OBJ 디렉토리 확인 및 생성
 if [ ! -d "$obj_dir" ]; then
-	mkdir "$obj_dir" "srcs"
-	echo -e $CURSIVE $YELLOW "       - Created .OBJ directory -" $NONE
+    mkdir -p "$obj_dir"
+    echo -e $CURSIVE $YELLOW "       - Created .OBJ directory -" $NONE
 else
-	echo -e $CURSIVE $GRAY "       - .OBJ directory already exists -" $NONE
+    echo -e $CURSIVE $GRAY "       - .OBJ directory already exists -" $NONE
+fi
+
+# srcs 디렉토리 확인 및 생성
+if [ ! -d "$src_dir" ]; then
+    mkdir -p "$src_dir"
+    echo -e $CURSIVE $YELLOW "       - Created srcs directory -" $NONE
+else
+    echo -e $CURSIVE $GRAY "       - srcs directory already exists -" $NONE
 fi
 
 bash ./SFML-installer/clangd_gen.sh
