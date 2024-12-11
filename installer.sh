@@ -43,17 +43,10 @@ echo ./SFML-installer/.gitignore >> .gitignore
 obj_dir=".OBJ"
 if [ ! -d "$obj_dir" ]; then
 	mkdir "$obj_dir"
+	mkdir "srcs"
 	echo -e $CURSIVE $YELLOW "       - Created .OBJ directory -" $NONE
 else
 	echo -e $CURSIVE $GRAY "       - .OBJ directory already exists -" $NONE
-fi
-
-src_dir="srcs"
-if [ ! -d "$src_dir" ]; then
-	mkdir "$src_dir"
-	echo -e $CURSIVE $YELLOW "       - Created srcs directory -" $NONE
-else
-	echo -e $CURSIVE $GRAY "       - srcs directory already exists -" $NONE
 fi
 
 bash ./SFML-installer/clangd_gen.sh
