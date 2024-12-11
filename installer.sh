@@ -38,6 +38,7 @@ mv ./"$sfml_dir"/extlibs/vorbisenc.framework ./"$sfml_dir"/Frameworks/vorbisenc.
 mv ./"$sfml_dir"/extlibs/vorbisfile.framework ./"$sfml_dir"/Frameworks/vorbisfile.framework
 
 cat ./SFML-installer/Makefile > Makefile
+
 cat ./SFML-installer/.gitignore > .gitignore
 
 obj_dir=".OBJ"
