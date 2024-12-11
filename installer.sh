@@ -41,7 +41,7 @@ echo ./SFML-installer/Makefile >> Makefile
 echo ./SFML-installer/.gitignore >> .gitignore
 
 obj_dir=".OBJ"
-src_dir="srcs"
+src_dir="./srcs"
 
 # .OBJ 디렉토리 확인 및 생성
 if [ ! -d "$obj_dir" ]; then
@@ -61,6 +61,5 @@ fi
 
 bash ./SFML-installer/clangd_gen.sh
 rm -fr "SFML-installer"
-mkdir -p "./srcs"
 echo -e "\033[1A\033[K"
 echo -e $CURSIVE $GREEN "        - Complete SFML -" $NONE
