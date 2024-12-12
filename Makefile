@@ -1,16 +1,16 @@
+# Add Program Name
 NAME			=
 
 CXX				=		c++
-CXXFLAGS		=		-I./SFML/include
+CXXFLAGS		=		-I./SFML/include -std=c++11
 LDFLAGS			=		-L./SFML/lib -lsfml-window -lsfml-graphics -lsfml-system -Wl,-rpath,./SFML/lib
 
-SRCS_DIR		=		./srcs
-
-OBJ_DIR			=		./.OBJ
-
+SRCS_DIR		=		./srcs/
+# Add srcs file
 SRC_FILES		=
 
-OBJ_FILES		=		$(SRC_FILES:$(SRCS_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+OBJ_DIR			=		./.OBJ
+OBJ_FILES		=		$(addprefix $(SRCS_DIR), $(SRC_FILES:.cpp=.o))
 
 NONE='\033[0m'
 GREEN='\033[32m'
@@ -24,22 +24,22 @@ DELETELINE='\033[K;
 all : $(NAME)
 
 $(NAME) : $(OBJ_FILES)
-	@echo $(CURSIVE)$(YELLOW) "   - Making $(NAME) Game -" $(NONE)
+	@echo $(CURSIVE)$(YELLOW) "\t- Making $(NAME) Game -" $(NONE)
 	@$(CXX) $(LDFLAGS) $^ -o $@
-	@echo $(CURSIVE)$(YELLOW) "    - Compiling $(NAME) -" $(NONE)
-	@echo $(GREEN)"            - Complete -"$(NONE)
+	@echo $(CURSIVE)$(YELLOW) "\t- Compiling $(NAME) -" $(NONE)
+	@echo $(GREEN)"\t- Complete -"$(NONE)
 
-$(OBJ_DIR)/%.o : $(SRCS_DIR)/%.cpp
-	@echo $(CURSIVE)$(YELLOW) "      - Making object files -" $(NONE)
+%.o : %.cpp
+	@echo $(CURSIVE)$(YELLOW) "\t- Making object files -" $(NONE)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean :
 	@rm -fr $(OBJ_FILES)
-	@echo $(CURSIVE)$(BLUE) "       - clean OBJ files -" $(NONE)
+	@echo $(CURSIVE)$(BLUE) "\t- clean OBJ files -" $(NONE)
 
 fclean : clean
 	@rm -fr $(NAME)
-	@echo $(CURSIVE)$(PURPLE)"  - clean $(NAME) file -"$(NONE)
+	@echo $(CURSIVE)$(PURPLE)"\t- clean $(NAME) file -"$(NONE)
 
 re	:
 	@make fclean
